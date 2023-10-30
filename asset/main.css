@@ -1,0 +1,664 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+header{
+    padding: 5px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 100;
+    inset-block-start: 0;
+    backdrop-filter: blur(50px);
+    box-shadow:0px 0px 9px  rgb(119, 128, 136);
+    
+}
+
+.bar{
+    width: 40px;
+    height: 5px;
+    margin: 3px auto;
+    transition: .3s ease-in-out;
+    background-color:orangered;
+}
+
+.hamburger {
+    margin-top: -10px;
+}
+
+.hamburger, .bar{
+    height: 3px;
+    width: 25px;
+    display: block;
+    position: relative;
+    right: 10px;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-menu{
+    width: 55vw;
+    height: 30vh;
+    display: none;
+    text-align: center;
+    position: absolute;
+    z-index: -10;
+    inset-block-start: 0;
+    inset-inline-end: -100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: orangered;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin-top: -19px;
+    margin-right: -0;
+}
+
+.nav-menu.active{
+    display: flex;
+    inset-block-start: 74px;
+    inset-inline-end: 0;
+    z-index: -100;
+}
+
+.nav-link, .nav-item{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .5s ease;
+}
+
+.nav-link:is(:hover, :active){
+    color: orangered;
+    font-size: 1.2em;
+}
+
+
+.typed-text{
+    color: orangered;
+}
+
+
+
+/* ###################################################part two############################################################## */
+
+
+.mastery{
+    margin: 1em;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+@keyframes typing {
+
+    from{width: 0;}
+    to{width: 100%;}
+    
+}
+
+@keyframes deleting {
+
+from{width: 100%;}
+to{width: 0;}
+
+}
+
+
+.typing-effect{
+    color: orangered;
+overflow: hidden;
+white-space: nowrap;
+animation: typing 3s steps(40,end), deleting 3s steps(40,end) 4s infinite;
+
+}
+
+
+
+/* ####################################################part three############################################################ */
+
+.choose{
+    text-align: center;
+    font-size: 34px;
+    color: orangered;
+}
+
+.choose:hover{
+    color: #3C1A5B;
+}
+
+.two{
+    margin: 5px;
+    padding: 10px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+
+/* ##################################################part four################################################################ */
+
+
+
+.stinger{
+    margin: 1em;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 1em rgb(202, 207, 212) ;
+    border-radius: 15px;
+}
+
+.bigi{
+    /* background-color: red; */
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.bezil{
+    margin: 1em;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+
+}
+
+
+.inari{
+    padding: 0px;
+    /* background-color: green; */
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.cola{
+    color: orangered;
+}
+
+.cola:hover{
+    color: #3C1A5B;
+}
+
+.cola::before{
+    content:"\1F4BB";
+}
+
+
+
+
+
+/* #####################################################Part five##################################################### */
+
+
+hr{
+    margin: 1em;
+}
+
+.traffic{
+    margin: 1em;
+    text-align: center;
+}
+
+
+/* #########################################################part six####################################################### */
+
+
+.technical{
+    margin: 1em;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+}
+
+.bugs{
+    /* background-color: aqua; */
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.bugs path{
+    width: 90%;
+    margin: auto;
+}
+
+.post{
+    color: orangered;
+}
+
+.post:hover{
+    color: #3C1A5B;
+}
+
+.post::before{
+    content: "\1F4D6";
+}
+
+
+
+
+
+                    .fearless{
+                        margin: 1em;
+                        justify-content: space-between;
+                        box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+                        border-radius: 15px;
+                    }
+
+                    .constulting{
+                        /* background-color: aqua; */
+                        margin-bottom: 1em;
+                        text-align: center;
+                    }
+
+
+
+
+
+
+
+
+
+
+/* ################################################part seven#################################################################### */
+
+
+
+
+.plans{
+    text-align: center;
+}
+
+
+.key::before{
+    content: "\2714";
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.word::before{
+    content: "-";
+    color: white;
+    background-color: red;
+    border-radius:50% ;
+    
+    
+}
+
+
+.fifteen{
+    background-color: rgb(85, 85, 224);
+    margin: 1em;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+
+}
+.sixteen{
+    background-color: rgb(85, 224, 120);
+    margin: 1em;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+
+}
+
+.number{
+    font-size: 45px;
+    color: black;
+}
+
+
+span{
+    color: black;
+}
+
+
+.verve{
+    background-color: blue;
+    height: 50px;
+    padding-top: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.res{
+    background-color: green;
+    height: 50px;
+    padding-top: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.research{
+    background-color: white;
+    color: rgb(15, 15, 15);
+    margin: 1em;
+}
+
+
+
+
+
+
+
+/* ################################################################part eight####################################################### */
+
+
+
+.article{
+    text-align: center;
+}
+
+.orient{
+    margin: 1em;
+    text-align: center;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+}
+
+.href{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.href:hover{
+    width: 130px;
+    transition: 2s ease;
+    
+}
+
+
+/* #############################################################footer################################################# */
+
+.usa::before{
+    content:"\1F3E0";
+    font-size: 20px;
+    
+}
+
+
+.mail::before{
+    content:"\2709";
+    font-size: 20px;   
+}
+
+.phone::before{
+    content: "\260E";
+    font-size: 20px;
+}
+
+footer{
+    background-color:  hsl(192, 100%, 9%);
+
+}
+
+.lontor{
+    justify-content: space-between;
+    background-color:  hsl(192, 100%, 9%);
+    color: rgb(202, 212, 221);
+}
+
+.spaces{
+        text-align: center;
+        margin-bottom: 1em;
+}
+
+
+.chief{
+    text-align:center;
+    background-color: black;
+    color: rgb(202, 212, 221);
+}
+
+
+
+
+/* #######################################################Contact Us######################################################## */
+
+.tact{
+    margin: 1em;
+}
+
+.astra{
+    text-align: center;
+    color: orangered;
+}
+
+
+
+/* ######################################################about us########################################################### */
+
+
+ul, ol{
+margin: 1em;
+}
+
+
+
+/* ####################################################keyword######################################################## */
+
+.your{
+    text-decoration: none;
+}
+
+.your:hover{
+    color: orangered;
+}
+
+.tecno{
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) {
+
+    .hamburger{
+        display: none;
+    }
+
+    header{
+        align-items: start;
+        padding-bottom: .8em;
+    }
+
+    .nav-menu{
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin-top: 1em;
+        background-color: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+    
+
+
+    /* ###################################################### */
+    .banner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .app{
+        width: 45%;
+        /* background-color: red; */
+    }
+
+    .one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* ######################################################## */
+
+
+    .stinger{
+        display: flex;
+        box-shadow: 2px 2px 2em white ;
+
+    }
+
+
+    .bigi{
+        width: 28%;
+        padding: 20px;
+        box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+        border-radius: 15px;
+    }
+
+    .bezil{
+        display: flex;
+        box-shadow: 2px 2px 2em white ;
+        
+    }
+
+    .inari{
+        width: 32%;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+    }
+
+    /* ######################################################## */
+
+
+    .image{
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .algorithms{
+        width: 50%;
+    }
+
+    .technical{
+        display: flex;
+    box-shadow: 2px 2px 2em white ;
+        
+    }
+
+    .bugs{
+        width: 32%;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+
+    }
+
+    .fearless{
+        display: flex;
+    box-shadow: 2px 2px 2em white ;
+
+    }
+
+    .constulting{
+        width: 32%;
+    box-shadow: 2px 2px 2em rgb(202, 207, 212) ;
+    border-radius: 15px;
+
+    }
+
+    /* ################################################################ */
+
+
+    .essential{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .classic{
+        width: 45%;
+    }
+
+
+    /*###############################################################  */
+
+
+    .last{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .orient{
+        width: 32%;
+    }
+
+
+    /* ################################################################ */
+
+
+    .lontor{
+        display: flex;
+    }
+
+    .spaces{
+        width: 32%;
+        /* background-color: red; */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+}
