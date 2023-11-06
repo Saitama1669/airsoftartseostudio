@@ -90,7 +90,7 @@ header{
 }
 
 .nav-link:is(:hover, :active){
-    color: orangered;
+    color: rgb(176, 174, 174);
     font-size: 1.2em;
 }
 
